@@ -29,7 +29,7 @@ All homework case requirements completed with detailed rationale:
 
 | # | Requirement | Document | Pages | Status |
 |---|-------------|----------|-------|--------|
-| 1 | Architecture Diagram | [Architecture_HLD.drawio](Architecture_HLD.drawio) (open with [draw.io](https://www.drawio.com/)) | Visual | Complete |
+| 1 | Architecture Diagram | [Architecture_HLD.drawio](Architecture_HLD.drawio) (download your local and open with [draw.io](https://www.drawio.com/)) | Visual | Complete |
 | 2 | Design Document | [DESIGN_DOCUMENT.md](DESIGN_DOCUMENT.md) | 40+ | Complete |
 | 3 | Communication Matrix | [COMMUNICATION_MATRIX.md](COMMUNICATION_MATRIX.md) | 15 | Complete |
 | 4 | Assumptions & Trade-offs | [ASSUMPTIONS_TRADEOFFS.md](ASSUMPTIONS_TRADEOFFS.md) | 20 | Complete |
