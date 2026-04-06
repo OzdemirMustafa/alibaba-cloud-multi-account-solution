@@ -27,12 +27,12 @@ This repository contains a production-ready multi-account architecture design fo
 
 All homework case requirements completed with detailed rationale:
 
-| # | Requirement | Document | Pages | Status |
-|---|-------------|----------|-------|--------|
-| 1 | Architecture Diagram | [Architecture_HLD.drawio](Architecture_HLD.drawio) ([view online](https://app.diagrams.net/#Uhttps://github.com/OzdemirMustafa/alibaba-cloud-multi-account-solution/raw/master/Architecture_HLD.drawio)) | Visual | Complete |
-| 2 | Design Document | [DESIGN_DOCUMENT.md](DESIGN_DOCUMENT.md) | 40+ | Complete |
-| 3 | Communication Matrix | [COMMUNICATION_MATRIX.md](COMMUNICATION_MATRIX.md) | 15 | Complete |
-| 4 | Assumptions & Trade-offs | [ASSUMPTIONS_TRADEOFFS.md](ASSUMPTIONS_TRADEOFFS.md) | 20 | Complete |
+| # | Requirement | Document | Status |
+|---|-------------|----------|--------|
+| 1 | Architecture Diagram | [Architecture_HLD.drawio](Architecture_HLD.drawio) ([view online](https://app.diagrams.net/#Uhttps://github.com/OzdemirMustafa/alibaba-cloud-multi-account-solution/raw/master/Architecture_HLD.drawio)) | Complete |
+| 2 | Design Document | [DESIGN_DOCUMENT.md](DESIGN_DOCUMENT.md) | Complete |
+| 3 | Communication Matrix | [COMMUNICATION_MATRIX.md](COMMUNICATION_MATRIX.md) | Complete |
+| 4 | Assumptions & Trade-offs | [ASSUMPTIONS_TRADEOFFS.md](ASSUMPTIONS_TRADEOFFS.md) | Complete |
 
 ---
 
