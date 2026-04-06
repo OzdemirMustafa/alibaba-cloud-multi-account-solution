@@ -88,7 +88,7 @@ Root Organization (ecom-management)
 
 **Decision:** PostgreSQL, MongoDB, Redis, Kafka, RabbitMQ on ECS
 
-**Annual Impact:** $204K savings vs managed services
+**Annual Impact:** More savings vs managed services
 
 **Rationale:**
 - Avoid vendor lock-in (portable to AWS/GCP)
@@ -103,14 +103,14 @@ Root Organization (ecom-management)
 
 **Decision:** Both availability zones serve production traffic
 
-**Annual Impact:** Prevents $4.68M revenue loss from downtime
+**Annual Impact:** Prevents revenue loss from downtime
 
 **Rationale:**
 - 99.99% availability vs 99.9% (8.7 hours/year eliminated)
 - Instant failover (users never notice AZ failure)
 - Validated in Feb 2026 AZ-A outage (zero customer downtime)
 
-**Trade-off:** 25% higher infrastructure cost ($480K/year) justified by revenue protection
+**Trade-off:** 25% higher infrastructure cost justified by revenue protection
 
 ---
 
@@ -118,7 +118,7 @@ Root Organization (ecom-management)
 
 **Decision:** All traffic routes through central Network Hub
 
-**Annual Impact:** $50K NAT cost savings
+**Annual Impact:** NAT cost savings
 
 **Rationale:**
 - Central Cloud Firewall inspects all East-West traffic
@@ -133,11 +133,11 @@ Root Organization (ecom-management)
 
 **Decision:** Separate production account per domain
 
-**Annual Impact:** $360K PCI audit savings
+**Annual Impact:** PCI audit savings
 
 **Rationale:**
 - Security isolation (payment breach ≠ catalog exposure)
-- Clear cost attribution ($45K Payment, $35K Order, etc.)
+- Clear cost attribution
 - Independent deployment lifecycles
 
 **Trade-off:** CEN complexity (managed via Terraform automation)
@@ -167,17 +167,6 @@ Root Organization (ecom-management)
 | Security & Audit | $12,000 | Equal split per prod account |
 | Network Hub (CEN, NAT, Firewall) | $8,000 | % of bandwidth consumed |
 | Reserved Instance Pool | $5,000 | Usage-based allocation |
-
-### Cost Optimization Impact
-
-| Initiative | Annual Savings | Status |
-|------------|---------------|--------|
-| Self-managed middleware | $204,000 | Implemented |
-| Hub-and-spoke NAT consolidation | $50,000 | Implemented |
-| Reserved instances (60% coverage) | $180,000 | Implemented |
-| Dev/staging auto-shutdown | $144,000 | Implemented |
-| Sandbox auto-cleanup | $60,000 | Implemented |
-| **Total Annual Savings** | **$638,000** | |
 
 ---
 
@@ -240,60 +229,12 @@ Root Organization (ecom-management)
 alibaba-cloud-multi-account-solution/
 │
 ├── README.md                      # This file (executive summary)
-├── DESIGN_DOCUMENT.md             # Comprehensive architecture design (40+ pages)
-├── COMMUNICATION_MATRIX.md        # Cross-account communication rules (15 pages)
-└── ASSUMPTIONS_TRADEOFFS.md       # Decision rationale & ADRs (20 pages)
+├── DESIGN_DOCUMENT.md             # Comprehensive architecture 
+├── COMMUNICATION_MATRIX.md        # Cross-account communication 
+└── ASSUMPTIONS_TRADEOFFS.md       # Decision rationale & ADRs
 ```
 
 ---
-
-## Implementation Roadmap
-
-### Phase 1: Foundation (Months 1-2)
-- Management, Security, Audit, Network accounts
-- Hub-and-spoke CEN topology
-- Landing zone automation (Terraform baseline)
-
-### Phase 2: Production (Months 3-4)
-- 4 production domain accounts
-- Self-managed middleware deployment (PostgreSQL, MongoDB, Redis, Kafka)
-- Active-active Frankfurt multi-AZ setup
-
-### Phase 3: Supporting Environments (Month 5)
-- 8 staging + dev accounts
-- Data platform accounts
-- Sandbox provisioning automation
-
-### Phase 4: DR & Observability (Month 6)
-- London passive DR configuration
-- Cross-region replication pipelines
-- Centralized monitoring (Prometheus/Grafana)
-
-**Go-Live:** Q4 2025 (soft launch) → Q1 2026 (full production migration complete)
-
----
-
-## Document Guide
-
-### For Executives (5-minute read)
-- Read this README (Executive Summary section)
-- Review Cost Summary and ROI metrics
-- Check Compliance Status table
-
-### For Architecture Review (1-hour read)
-- Start with [DESIGN_DOCUMENT.md](DESIGN_DOCUMENT.md)
-- Focus on Account Strategy and Network Design sections
-- Review [ASSUMPTIONS_TRADEOFFS.md](ASSUMPTIONS_TRADEOFFS.md) for decision rationale
-
-### For Security Audit (2-hour read)
-- Read [COMMUNICATION_MATRIX.md](COMMUNICATION_MATRIX.md) in full
-- Review IAM Model and Governance sections in Design Document
-- Examine Risk Register in Assumptions & Trade-offs
-
-### For Implementation Teams (4-hour read)
-- Read all documents sequentially
-- Pay attention to Landing Zone automation details
-- Review DR procedures and runbook references
 
 ---
 
